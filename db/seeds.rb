@@ -1,15 +1,14 @@
-# create hash table of data (key = row index, value = array of values)
-
 soybean_data = {
-   1 => ['april','may','june','july','august','september','october'],
-   2 => ['normal','lt-normal'],
-   3 => ['lt-norm','norm','gt-norm'],
-   4 => ['lt-norm','norm','gt-norm'],
-   5 => ['yes','no'],
-   6 => ['diff-lst-year','same-lst-yr','same-lst-two-yr','same-lst-sev-yrs'],
-   7 => ['scattered','low-areas','upper-areas','whole-field'],
-   8 => ['minor','pot-severe','severe'],
-   9 => ['none','fungicide','other'],
+  0 =>
+  1 => ['april','may','june','july','august','september','october'],
+  2 => ['normal','lt-normal'],
+  3 => ['lt-norm','norm','gt-norm'],
+  4 => ['lt-norm','norm','gt-norm'],
+  5 => ['yes','no'],
+  6 => ['diff-lst-year','same-lst-yr','same-lst-two-yr','same-lst-sev-yrs'],
+  7 => ['scattered','low-areas','upper-areas','whole-field'],
+  8 => ['minor','pot-severe','severe'],
+  9 => ['none','fungicide','other'],
   10 => ['90-100%','80-89%','lt-80%'],
   11 => ['norm','abnorm'],
   12 => ['norm','abnor'],
@@ -49,3 +48,6 @@ soybean_data = {
 # then number in value corresponds to index of the array in the hash
 # next if value = '?' (which means it will = nil)
 
+
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
