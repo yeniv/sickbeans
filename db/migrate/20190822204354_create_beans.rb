@@ -1,6 +1,7 @@
 class CreateBeans < ActiveRecord::Migration[5.2]
   def change
     create_table :beans do |t|
+      t.string :class
       t.string :date
       t.string :plant_stand
       t.string :precip
