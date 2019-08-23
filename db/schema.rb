@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_22_214539) do
+ActiveRecord::Schema.define(version: 2019_08_23_064317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,14 +40,12 @@ ActiveRecord::Schema.define(version: 2019_08_22_214539) do
     t.string "stem_cankers"
     t.string "canker_lesion"
     t.string "fruiting_bodies"
-    t.string "external"
-    t.string "decay"
+    t.string "external_decay"
     t.string "mycelium"
     t.string "int_discolor"
     t.string "sclerotia"
     t.string "fruit_pods"
-    t.string "fruit"
-    t.string "spots"
+    t.string "fruit_spots"
     t.string "seed"
     t.string "mold_growth"
     t.string "seed_discolor"

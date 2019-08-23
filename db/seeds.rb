@@ -1,8 +1,8 @@
-data = {
+data_structure = {
   0 => {
     column: 'classification',
-    data: []
-  }
+    data: [] #data comes from soybean[0]
+  },
   1 => {
     column: 'date',
     data:['april', 'may', 'june', 'july', 'august', 'september', 'october']
@@ -96,7 +96,7 @@ data = {
     data:['absent', 'present']
   },
   24 => {
-    column: 'external decay'
+    column: 'external_decay',
      data:['absent', 'firm-and-dry', 'watery']
    },
   25 => {
@@ -116,7 +116,7 @@ data = {
     data:['norm', 'diseased', 'few-present', 'dna']
   },
   29 => {
-    column: 'fruit spots'
+    column: 'fruit_spots',
      data:['absent', 'colored', 'brown-w/blk-specks', 'distort', 'dna']
    },
   30 => {
@@ -145,12 +145,17 @@ data = {
   }
 }
 
-# import data
-# loop over each line
-# loop over each item (each with index) separated by comma
-# first value = class
-# then each index corresponds to hash table
-# then number in value corresponds to index of the array in the hash
-# next if value = '?' (which means it will = nil)
+require 'csv'
 
-# once works, refactor into a helper class and simply pass the imported data to the class
+soybean_large_data = CSV.read('lib/soybean_data/soybean-large.data')
+
+soybean_large_data.each do |soybean|
+  new_soybean = Bean.create
+  soybean.each_with_index do |data, i|
+    column = data_structure[i][:column]
+    value = i == 0 ? data : data_structure[i][:data][data.to_i]
+    new_soybean[column.to_sym] = value
+  end
+
+  new_soybean.save
+end
