@@ -5,6 +5,7 @@ class PagesController < ApplicationController
       sql_query = ""
       @soybeans = Bean.where.not(sql_query, query: "%#{params[:query]}%")
     else
+      # @soybeans = Bean.all
       @soybeans = Bean.all
     end
   end
