@@ -1,8 +1,13 @@
 <h1>Soybeans</h1>
+
+<%= simple_form_for :search, url: root_path, method: 'GET' do |f| %>
+  <%=  %>
+  <%= f.input :classifications, collection: @classifications, as: :check_boxes %>
+  <%= f.button :submit %>
+<% end %>
+
 <h3>Count: <%= @soybeans.count %></h3>
 
-<ol>
-  <% @soybeans.each do |soybean| %>
-    <li> 🥔 </li>
-  <% end %>
-</ol>
+<% @soybeans.each do |soybean| %>
+    <p>🥔 <%= soybean.classification %></p>
+<% end %>

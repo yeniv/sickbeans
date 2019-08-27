@@ -3,7 +3,27 @@ class Bean < ApplicationRecord
     data_structure = {
       0 => {
         column: 'classification',
-        data: [] #data comes from soybean[0]
+        data: [
+          'diaporthe-stem-canker',
+          'charcoal-rot',
+          'rhizoctonia-root-rot',
+          'phytophthora-rot',
+          'brown-stem-rot',
+          'powdery-mildew',
+          'downy-mildew',
+          'brown-spot',
+          'bacterial-blight',
+          'bacterial-pustule',
+          'purple-seed-stain',
+          'anthracnose',
+          'phyllosticta-leaf-spot',
+          'alternarialeaf-spot',
+          'frog-eye-leaf-spot',
+          'diaporthe-pod-&-stem-blight',
+          'cyst-nematode',
+          '2-4-d-injury',
+          'herbicide-injury'
+        ]
       },
       1 => {
         column: 'date',
