@@ -1,9 +1,43 @@
 <h1>Soybeans</h1>
 
 <%= simple_form_for :search, url: root_path, method: 'GET' do |f| %>
-  <%=  %>
-  <%= f.input :classifications, collection: @classifications, as: :check_boxes %>
-  <%= f.button :submit %>
+  <%= f.input :classification, collection: @classification, as: :check_boxes %>
+  <%= f.input :date, collection: @date, as: :check_boxes %>
+  <%= f.input :plant_stand, collection: @plant_stand, as: :check_boxes %>
+  <%= f.input :precip, collection: @precip, as: :check_boxes %>
+  <%= f.input :temp, collection: @temp, as: :check_boxes %>
+  <%= f.input :hail, collection: @hail, as: :check_boxes %>
+  <%= f.input :crop_hist, collection: @crop_hist, as: :check_boxes %>
+  <%= f.input :area_damaged, collection: @area_damaged, as: :check_boxes %>
+  <%= f.input :severity, collection: @severity, as: :check_boxes %>
+  <%= f.input :seed_tmt, collection: @seed_tmt, as: :check_boxes %>
+  <%= f.input :germination, collection: @germination, as: :check_boxes %>
+  <%= f.input :plant_growth, collection: @plant_growth, as: :check_boxes %>
+  <%= f.input :leaves, collection: @leaves, as: :check_boxes %>
+  <%= f.input :leafspots_halo, collection: @leafspots_halo, as: :check_boxes %>
+  <%= f.input :leafspots_marg, collection: @leafspots_marg, as: :check_boxes %>
+  <%= f.input :leafspot_size, collection: @leafspot_size, as: :check_boxes %>
+  <%= f.input :leaf_shread, collection: @leaf_shread, as: :check_boxes %>
+  <%= f.input :leaf_malf, collection: @leaf_malf, as: :check_boxes %>
+  <%= f.input :leaf_mild, collection: @leaf_mild, as: :check_boxes %>
+  <%= f.input :stem, collection: @stem, as: :check_boxes %>
+  <%= f.input :lodging, collection: @lodging, as: :check_boxes %>
+  <%= f.input :stem_cankers, collection: @stem_cankers, as: :check_boxes %>
+  <%= f.input :canker_lesion, collection: @canker_lesion, as: :check_boxes %>
+  <%= f.input :fruiting_bodies, collection: @fruiting_bodies, as: :check_boxes %>
+  <%= f.input :external_decay, collection: @external_decay, as: :check_boxes %>
+  <%= f.input :mycelium, collection: @mycelium, as: :check_boxes %>
+  <%= f.input :int_discolor, collection: @int_discolor, as: :check_boxes %>
+  <%= f.input :sclerotia, collection: @sclerotia, as: :check_boxes %>
+  <%= f.input :fruit_pods, collection: @fruit_pods, as: :check_boxes %>
+  <%= f.input :fruit_spots, collection: @fruit_spots, as: :check_boxes %>
+  <%= f.input :seed, collection: @seed, as: :check_boxes %>
+  <%= f.input :mold_growth, collection: @mold_growth, as: :check_boxes %>
+  <%= f.input :seed_discolor, collection: @seed_discolor, as: :check_boxes %>
+  <%= f.input :seed_size, collection: @seed_size, as: :check_boxes %>
+  <%= f.input :shriveling, collection: @shriveling, as: :check_boxes %>
+  <%= f.input :roots, collection: @roots, as: :check_boxes %>
+  <%= f.button :submit, 'Submit' %>
 <% end %>
 
 <h3>Count: <%= @soybeans.count %></h3>
