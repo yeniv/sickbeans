@@ -1,9 +1,14 @@
-<h1>Soybeans</h1>
-
-<%= render 'form' %>
-
-<h3>Count: <%= @soybeans.count %></h3>
-
-<% @soybeans.each do |soybean| %>
-    <p>🥔 <%= soybean.classification %></p>
-<% end %>
+<div class="container-main">
+  <div class="container-form">
+    <div class="header">
+      <h1>Sickbeans</h1>
+      <h2>🤮</h2>
+      <h3>Soybeans with selected characteristics will be removed from sample.</h3>
+      <h3><%= @soybeans.count %> remaining</h3>
+    </div>
+    <%= render 'form' %>
+  </div>
+  <div class="container-soybean">
+    <%= render 'soybeans' %>
+  </div>
+</div>

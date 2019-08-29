@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
 
   def index
+    @soybeans = Bean.all
     @data_structure = Bean.data_structure
+    search = params['search']
 
     @classification   = @data_structure[0][:data]
     @date             = @data_structure[1][:data]
@@ -39,10 +41,6 @@ class PagesController < ApplicationController
     @seed_size        = @data_structure[33][:data]
     @shriveling       = @data_structure[34][:data]
     @roots            = @data_structure[35][:data]
-
-    @soybeans = Bean.all
-
-    search = params['search']
 
     if search.present?
       selected_classification   = search['classification']

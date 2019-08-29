@@ -1,12 +1,15 @@
-/*form headings*/
 .simple_form {
-  color: rgb(80, 80, 80);
+  /*color: rgb(80, 80, 80);*/
   text-transform: capitalize;
-  display: block;
+  font-size: 12px;
 }
 
+.form-check-input {
+  transform: scale(1.5);
+}
 div .check_boxes {
   color: red;
+  margin: 8px;
 }
 
 .checkbox {
