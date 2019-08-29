@@ -1,0 +1,59 @@
+.container-soybean {
+  width: calc(100% - 365px);
+  padding: 20px;
+  position: -webkit-sticky; /* Safari */
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  // flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.soybean {
+  // font-size: calc(3.4vw);
+  font-size: calc(2.05vw);
+  // padding: 13px;
+  padding: 0.77vw;
+  // flex-grow: 1;
+  // width: 200px;
+  // height: 50px;
+  display: inline-block;
+  // background-color: white;
+  margin-bottom: -25px;
+  // box-shadow: 1px 2px 20px 0px rgba(0, 0, 0, 0.05);
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.soybean:hover > .popup-soybean {
+  display: block;
+}
+
+.popup-soybean {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 2px;
+  box-shadow: 1px 2px 20px 0px rgba(0, 0, 0, 0.05);
+  text-transform: capitalize;
+  z-index: 10;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: none;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 400;
+  width: 95px;
+  padding: 5px;
+  p {
+    margin: 0;
+  }
+  h6 {
+    color: rgba(77, 163, 42, 0.9);
+    font-weight: 800;
+  }
+}

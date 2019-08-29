@@ -1,19 +1,26 @@
 .simple_form {
-  /*color: rgb(80, 80, 80);*/
+  color: rgb(80, 80, 80);
   text-transform: capitalize;
   font-size: 12px;
 }
 
 .form-check-input {
-  transform: scale(1.5);
-}
-div .check_boxes {
-  color: red;
-  margin: 8px;
+  transform: scale(1.25);
 }
 
-.checkbox {
-  /*color: blue;*/
-
+.collection_check_boxes {
+  padding-left: 5px;
+  line-height: 7px;
+  font-weight: 400;
+  color: rgb(40, 40, 40);
 }
+
+.col-form-label {
+  /*color: rgb(80, 80, 80);*/
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(77, 163, 42, 0.9);
+}
+
 
