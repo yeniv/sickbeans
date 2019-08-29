@@ -42,6 +42,15 @@ body {
   }
 }
 
+.badge {
+  background-color: rgba(77, 163, 42, 0.9);
+  color: white;
+  padding: 8px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .container-soybean {
   width: calc(100% - 365px);
   padding: 20px;
