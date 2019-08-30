@@ -47,4 +47,19 @@ body {
 .btn-success {
   background-color: rgba(77, 163, 42, 0.9);
   font-weight: 600;
+  &:focus {
+  outline: none;
+  }
+}
+
+.btn-clear-selection {
+  background-color: rgb(255, 196, 35);
+  color: rgb(40, 40, 40);
+  font-weight: 600;
+  &:hover {
+    background-color: rgb(255, 183, 0);
+  }
+  &:focus {
+  outline: none;
+  }
 }
