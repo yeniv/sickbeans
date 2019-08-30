@@ -16,11 +16,40 @@
 }
 
 .col-form-label {
-  /*color: rgb(80, 80, 80);*/
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 4px;
   border-bottom: 1px solid rgba(77, 163, 42, 0.9);
 }
 
+.buttons-form {
+  position: -webkit-sticky;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(245, 245, 245);
+  width: 365px;
+  padding: 20px;
+  box-shadow: -20px 0px 10px 5px rgba(0, 0, 0, 0.05);
+}
 
+.btn-success {
+  background-color: rgba(77, 163, 42, 0.9);
+  font-weight: 600;
+  margin-bottom: 8px;
+  &:focus {
+  outline: none;
+  }
+}
+
+.btn-clear-selection {
+  background-color: rgb(255, 196, 35);
+  color: rgb(40, 40, 40);
+  font-weight: 600;
+  &:hover {
+    background-color: rgb(255, 183, 0);
+  }
+  &:focus {
+  outline: none;
+  }
+}
