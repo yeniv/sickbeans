@@ -1,13 +1,13 @@
 // ES6 syntax doesn't work, hence the 'var' & 'function' declaratinon...
 
 function updateSoybeans(innerHTML){
-  var newSoybeans = document.querySelector('.container-soybean');
+  const newSoybeans = document.querySelector('.container-soybean');
   newSoybeans.innerHTML = innerHTML;
 }
 
 function updateCounter(){
-  var soybeans = document.querySelectorAll('.soybean')
-  var badge = document.querySelector('.badge')
+  const soybeans = document.querySelectorAll('.soybean')
+  const badge = document.querySelector('.badge')
   badge.innerText = `${soybeans.length} soybeans in sample`
 }
 
