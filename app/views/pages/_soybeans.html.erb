@@ -3,42 +3,148 @@
     <div class="soybean">
       <p>🥔</p>
       <div class="popup-soybean">
+        <h3>👈</h3>
         <h6><%= soybean.classification %></h6>
-        <p><%= soybean.date unless soybean.date == 'absent' %></p>
-        <p><%= soybean.plant_stand unless soybean.date == 'absent' %></p>
-        <p><%= soybean.precip unless soybean.precip == 'absent' %></p>
-        <p><%= soybean.temp unless soybean.temp == 'absent' %></p>
-        <p><%= soybean.hail unless soybean.date == 'absent' %></p>
-        <p><%= soybean.crop_hist unless soybean.crop_hist == 'absent' %></p>
-        <p><%= soybean.area_damaged unless soybean.area_damaged == 'absent' %></p>
-        <p><%= soybean.severity unless soybean.severity == 'absent' %></p>
-        <p><%= soybean.seed_tmt unless soybean.seed_tmt == 'absent' %></p>
-        <p><%= soybean.germination unless soybean.germination == 'absent' %></p>
-        <p><%= soybean.plant_growth unless soybean.plant_growth == 'absent' %></p>
-        <p><%= soybean.leaves unless soybean.leaves == 'absent' %></p>
-        <p><%= soybean.leafspots_halo unless soybean.leafspots_halo == 'absent' %></p>
-        <p><%= soybean.leafspots_marg unless soybean.leafspots_marg == 'absent' %></p>
-        <p><%= soybean.leafspot_size unless soybean.leafspot_size == 'absent' %></p>
-        <p><%= soybean.leaf_shread unless soybean.leaf_shread == 'absent' %></p>
-        <p><%= soybean.leaf_malf unless soybean.leaf_malf == 'absent' %></p>
-        <p><%= soybean.leaf_mild unless soybean.leaf_mild == 'absent' %></p>
-        <p><%= soybean.stem unless soybean.stem == 'absent' %></p>
-        <p><%= soybean.lodging unless soybean.lodging == 'absent' %></p>
-        <p><%= soybean.stem_cankers unless soybean.stem_cankers == 'absent' %></p>
-        <p><%= soybean.canker_lesion unless soybean.canker_lesion == 'absent' %></p>
-        <p><%= soybean.fruiting_bodies unless soybean.fruiting_bodies == 'absent' %></p>
-        <p><%= soybean.external_decay unless soybean.external_decay == 'absent' %></p>
-        <p><%= soybean.mycelium unless soybean.mycelium == 'absent' %></p>
-        <p><%= soybean.int_discolor unless soybean.int_discolor == 'absent' %></p>
-        <p><%= soybean.sclerotia unless soybean.sclerotia == 'absent' %></p>
-        <p><%= soybean.fruit_pods unless soybean.fruit_pods == 'absent' %></p>
-        <p><%= soybean.fruit_spots unless soybean.fruit_spots == 'absent' %></p>
-        <p><%= soybean.seed unless soybean.seed == 'absent' %></p>
-        <p><%= soybean.mold_growth unless soybean.mold_growth == 'absent' %></p>
-        <p><%= soybean.seed_discolor unless soybean.seed_discolor == 'absent' %></p>
-        <p><%= soybean.seed_size unless soybean.seed_size == 'absent' %></p>
-        <p><%= soybean.shriveling unless soybean.shriveling == 'absent' %></p>
-        <p><%= soybean.roots unless soybean.roots == 'absent' %></p>
+
+        <% if soybean.date != 'absent' %>
+          <p><span class='popup-label'>Date:</span> <%= soybean.date %></p>
+        <% end %>
+
+        <% if soybean.plant_stand != 'absent' %>
+          <p><span class='popup-label'>Plant Stand:</span> <%= soybean.plant_stand %></p>
+        <% end %>
+
+        <% if soybean.precip != 'absent' %>
+          <p><span class='popup-label'>Precip:</span> <%= soybean.precip %></p>
+        <% end %>
+
+        <% if soybean.temp != 'absent' %>
+          <p><span class='popup-label'>Temp:</span> <%= soybean.temp %></p>
+        <% end %>
+
+        <% if soybean.hail != 'absent' %>
+          <p><span class='popup-label'>Hail:</span> <%= soybean.hail %></p>
+        <% end %>
+
+        <% if soybean.crop_hist != 'absent' %>
+          <p><span class='popup-label'>Crop Hist:</span> <%= soybean.crop_hist %></p>
+        <% end %>
+
+        <% if soybean.area_damaged != 'absent' %>
+          <p><span class='popup-label'>Area Damaged:</span> <%= soybean.area_damaged %></p>
+        <% end %>
+
+        <% if soybean.severity != 'absent' %>
+          <p><span class='popup-label'>Severity:</span> <%= soybean.severity %></p>
+        <% end %>
+
+        <% if soybean.seed_tmt != 'absent' %>
+          <p><span class='popup-label'>Seed Tmt:</span> <%= soybean.seed_tmt %></p>
+        <% end %>
+
+        <% if soybean.germination != 'absent' %>
+          <p><span class='popup-label'>Germination:</span> <%= soybean.germination %></p>
+        <% end %>
+
+        <% if soybean.plant_growth != 'absent' %>
+          <p><span class='popup-label'>Plant Growth:</span> <%= soybean.plant_growth %></p>
+        <% end %>
+
+        <% if soybean.leaves != 'absent' %>
+          <p><span class='popup-label'>Leaves:</span> <%= soybean.leaves %></p>
+        <% end %>
+
+        <% if soybean.leafspots_halo != 'absent' %>
+          <p><span class='popup-label'>Leafspots Halo:</span> <%= soybean.leafspots_halo %></p>
+        <% end %>
+
+        <% if soybean.leafspots_marg != 'absent' %>
+          <p><span class='popup-label'>Leafspots Marg:</span> <%= soybean.leafspots_marg %></p>
+        <% end %>
+
+        <% if soybean.leafspot_size != 'absent' %>
+          <p><span class='popup-label'>Leafspot Size:</span> <%= soybean.leafspot_size %></p>
+        <% end %>
+
+        <% if soybean.leaf_shread != 'absent' %>
+          <p><span class='popup-label'>leaf Shread:</span> <%= soybean.leaf_shread %></p>
+        <% end %>
+
+        <% if soybean.leaf_malf != 'absent' %>
+          <p><span class='popup-label'>leaf Malf:</span> <%= soybean.leaf_malf %></p>
+        <% end %>
+
+        <% if soybean.leaf_mild != 'absent' %>
+          <p><span class='popup-label'>leaf Mild:</span> <%= soybean.leaf_mild %></p>
+        <% end %>
+
+        <% if soybean.stem != 'absent' %>
+          <p><span class='popup-label'>Stem:</span> <%= soybean.stem %></p>
+        <% end %>
+
+        <% if soybean.lodging != 'absent' %>
+          <p><span class='popup-label'>Lodging:</span> <%= soybean.lodging %></p>
+        <% end %>
+
+        <% if soybean.stem_cankers != 'absent' %>
+          <p><span class='popup-label'>Stem Cankers:</span> <%= soybean.stem_cankers %></p>
+        <% end %>
+
+        <% if soybean.canker_lesion != 'absent' %>
+          <p><span class='popup-label'>Canker Lesion:</span> <%= soybean.canker_lesion %></p>
+        <% end %>
+
+        <% if soybean.fruiting_bodies != 'absent' %>
+          <p><span class='popup-label'>Fruiting Bodies:</span> <%= soybean.fruiting_bodies %></p>
+        <% end %>
+
+        <% if soybean.external_decay != 'absent' %>
+          <p><span class='popup-label'>External Decay:</span> <%= soybean.external_decay %></p>
+        <% end %>
+
+        <% if soybean.mycelium != 'absent' %>
+          <p><span class='popup-label'>Mycelium:</span> <%= soybean.mycelium %></p>
+        <% end %>
+
+        <% if soybean.int_discolor != 'absent' %>
+          <p><span class='popup-label'>Int Discolor:</span> <%= soybean.int_discolor %></p>
+        <% end %>
+
+        <% if soybean.sclerotia != 'absent' %>
+          <p><span class='popup-label'>Sclerotia:</span> <%= soybean.sclerotia %></p>
+        <% end %>
+
+        <% if soybean.fruit_pods != 'absent' %>
+          <p><span class='popup-label'>Fruit Pods:</span> <%= soybean.fruit_pods %></p>
+        <% end %>
+
+        <% if soybean.fruit_spots != 'absent' %>
+          <p><span class='popup-label'>Fruit Spots:</span> <%= soybean.fruit_spots %></p>
+        <% end %>
+
+        <% if soybean.seed != 'absent' %>
+          <p><span class='popup-label'>Seed:</span> <%= soybean.seed %></p>
+        <% end %>
+
+        <% if soybean.mold_growth != 'absent' %>
+          <p><span class='popup-label'>Mold Growth:</span> <%= soybean.mold_growth %></p>
+        <% end %>
+
+        <% if soybean.seed_discolor != 'absent' %>
+          <p><span class='popup-label'>Seed Discolor:</span> <%= soybean.seed_discolor %></p>
+        <% end %>
+
+        <% if soybean.seed_size != 'absent' %>
+          <p><span class='popup-label'>Seed Size:</span> <%= soybean.seed_size %></p>
+        <% end %>
+
+        <% if soybean.shriveling != 'absent' %>
+          <p><span class='popup-label'>Shriveling:</span> <%= soybean.shriveling %></p>
+        <% end %>
+
+        <% if soybean.roots != 'absent' %>
+          <p><span class='popup-label'>Roots:</span> <%= soybean.roots %></p>
+        <% end %>
       </div>
     </div>
   <% end %>
