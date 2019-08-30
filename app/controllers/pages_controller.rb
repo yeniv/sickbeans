@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   def index
     @soybeans = Bean.all
     @data_structure = Bean.data_structure
@@ -117,9 +116,13 @@ class PagesController < ApplicationController
         seed_size:        selected_seed_size,
         shriveling:       selected_shriveling,
         roots:            selected_roots
-        )
+      )
+
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
+
     end
-
   end
-
 end
