@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   def index
     @soybeans = Bean.all
     @data_structure = Bean.data_structure
@@ -117,9 +116,7 @@ class PagesController < ApplicationController
         seed_size:        selected_seed_size,
         shriveling:       selected_shriveling,
         roots:            selected_roots
-        )
+      )
     end
-
   end
-
 end

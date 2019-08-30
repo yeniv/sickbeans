@@ -1,4 +1,4 @@
-<%= simple_form_for :search, url: root_path, method: 'GET',
+<%= simple_form_for :search, url: root_path, method: 'GET', remote: true,
     defaults: {required: false, as: :check_boxes} do |f| %>
   <%= f.input :classification, collection: @classification %>
   <%= f.input :date, collection: @date %>
