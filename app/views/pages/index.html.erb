@@ -1,16 +1,7 @@
 <div class="container-main">
   <div class="container-form">
-    <div class="header">
-      <h1>Sickbeans</h1>
-      <h2>🤮</h2>
-      <h3>Soybeans with selected characteristics will be removed from the sample.</h3>
-      <span class="badge">
-        <%= @soybeans.count %> soybeans left
-      </span>
-    </div>
+    <%= render 'header' %>
     <%= render 'form' %>
   </div>
-  <div class="container-soybean">
-    <%= render 'soybeans' %>
-  </div>
+  <%= render 'soybeans' %>
 </div>
