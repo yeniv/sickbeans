@@ -117,6 +117,12 @@ class PagesController < ApplicationController
         shriveling:       selected_shriveling,
         roots:            selected_roots
       )
+
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
+
     end
   end
 end
