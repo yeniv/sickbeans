@@ -250,6 +250,4 @@ class Bean < ApplicationRecord
       roots:             params['roots']
     }
   end
-
-  # make new function that returns variables names based on data_structure.data for the controller
 end
