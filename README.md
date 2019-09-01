@@ -8,8 +8,8 @@ Functionality:
 - Soybean data collection stored in Bean model to create view form labels
 - Search params transformed into hash table via Bean model 
 - Soybean data is displayed on rollover
-- Form doesn't reload the page thanks to AJAX
-- Javascript clears search parameters
+- Selected soybeans are removed without page reload thanks to AJAX
+- Javascript clears search parameters when 'Reset' button is clicked
 
 Features I'd like to add in the future: 
 
