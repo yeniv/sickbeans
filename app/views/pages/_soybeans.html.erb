@@ -5,19 +5,18 @@
       <div class="popup-soybean">
         <h3>👈</h3>
         <h6><%= soybean.classification %></h6>
-
         <% @data_structure.each_with_index do |data, i| %>
           <% next if i == 0  %>
-          <% if soybean[data.second[:column].to_sym] != 'absent' %>
+          <% column = data.second[:column].to_sym %>
+          <% if soybean[column] != 'absent' %>
             <p>
               <span class='popup-label'>
-                <%= data.second[:column] %>:
+                <%= column %>:
               </span>
-              <%= soybean[data.second[:column].to_sym] %>
+              <%= soybean[column] %>
             </p>
           <% end %>
         <% end %>
-
       </div>
     </div>
   <% end %>
