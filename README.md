@@ -16,3 +16,4 @@ Features I'd like to add in the future:
 - Mobile responsiveness
 - Ensure popups never appear off screen 
 - Further refactor Bean model code
+- Loader animation 
