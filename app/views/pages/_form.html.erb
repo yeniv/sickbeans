@@ -1,41 +1,8 @@
 <%= simple_form_for :search, url: root_path, method: 'GET', remote: true,
     defaults: {required: false, as: :check_boxes} do |f| %>
-  <%= f.input :classification, collection: @collection[:classification] %>
-  <%= f.input :date, collection: @collection[:date] %>
-  <%= f.input :plant_stand, collection: @collection[:plant_stand] %>
-  <%= f.input :precip, collection: @collection[:precip] %>
-  <%= f.input :temp, collection: @collection[:temp] %>
-  <%= f.input :hail, collection: @collection[:hail] %>
-  <%= f.input :crop_hist, collection: @collection[:crop_hist] %>
-  <%= f.input :area_damaged, collection: @collection[:area_damaged] %>
-  <%= f.input :severity, collection: @collection[:severity] %>
-  <%= f.input :seed_tmt, collection: @collection[:seed_tmt] %>
-  <%= f.input :germination, collection: @collection[:germination] %>
-  <%= f.input :plant_growth, collection: @collection[:plant_growth] %>
-  <%= f.input :leaves, collection: @collection[:leaves] %>
-  <%= f.input :leafspots_halo, collection: @collection[:leafspots_halo] %>
-  <%= f.input :leafspots_marg, collection: @collection[:leafspots_marg] %>
-  <%= f.input :leafspot_size, collection: @collection[:leafspot_size] %>
-  <%= f.input :leaf_shread, collection: @collection[:leaf_shread] %>
-  <%= f.input :leaf_malf, collection: @collection[:leaf_malf] %>
-  <%= f.input :leaf_mild, collection: @collection[:leaf_mild] %>
-  <%= f.input :stem, collection: @collection[:stem] %>
-  <%= f.input :lodging, collection: @collection[:lodging] %>
-  <%= f.input :stem_cankers, collection: @collection[:stem_cankers] %>
-  <%= f.input :canker_lesion, collection: @collection[:canker_lesion] %>
-  <%= f.input :fruiting_bodies, collection: @collection[:fruiting_bodies] %>
-  <%= f.input :external_decay, collection: @collection[:external_decay] %>
-  <%= f.input :mycelium, collection: @collection[:mycelium] %>
-  <%= f.input :int_discolor, collection: @collection[:int_discolor] %>
-  <%= f.input :sclerotia, collection: @collection[:sclerotia] %>
-  <%= f.input :fruit_pods, collection: @collection[:fruit_pods] %>
-  <%= f.input :fruit_spots, collection: @collection[:fruit_spots] %>
-  <%= f.input :seed, collection: @collection[:seed] %>
-  <%= f.input :mold_growth, collection: @collection[:mold_growth] %>
-  <%= f.input :seed_discolor, collection: @collection[:seed_discolor] %>
-  <%= f.input :seed_size, collection: @collection[:seed_size] %>
-  <%= f.input :shriveling, collection: @collection[:shriveling] %>
-  <%= f.input :roots, collection: @collection[:roots] %>
+  <% @data_structure.each do |data| %>
+    <%= f.input data.second[:column].to_sym, collection: data.second[:data] %>
+  <% end %>
   <div class='buttons-form'>
     <%= f.button :submit, 'Submit', class: 'btn btn-success btn-block' %>
     <%= f.button :submit, 'Reset', class: 'btn btn-block btn-clear-selection' %>
